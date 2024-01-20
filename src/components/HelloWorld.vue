@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-уфф мы работаем
+наш текст
+<button type="button" class="btn btn-primary">Primary</button>
   </div>
 </template>
 
