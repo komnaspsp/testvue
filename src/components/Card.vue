@@ -1,33 +1,66 @@
 <template>
-  <div class="hello">
-    <div class="card" style="width: 18rem;">
-      <img src="https://i.playground.ru/p/jjQzDaTny6cQ_zPrNu7sPA.png" class="card-img-top" alt="...">
-       <div class="card-body">
-        <p class="card-text">{{msg}}</p>
-        <p class="card-text">{{descr}}</p>
+  <div class="rows">
+      <form class="row g-3">
+        <div class="col-auto">
+          <label for="inputName" class="visually-hidden">Название</label>
+          <input v-model="part.Name" type="text" class="form-control" id="inputName" placeholder="Название">
+        </div>
+          <div class="col-auto">
+          <label for="inputPrace" class="visually-hidden">Цена за штуку</label>
+          <input v-model="volute.Volute" type="text" class="form-control" id="inputPrace" placeholder="Цена за штуку">
+        </div>  <div class="col-auto">
+          <label for="inputVolute" class="visually-hidden">Кол-во</label>
+          <input v-model="Prise.Praice" type="text" class="form-control" id="inputVolute" placeholder="Кол-во">
+        </div>
       
-      </div>
-      <button v-on:click:"renove" type="button" class="btn btn-danger">Делит</button>
+        <div class="col-auto">
+          <button @click="added"  class="btn btn-primary mb-3">Добавить</button>
+        </div>
+      </form>
+      <button @click="show" class="btn btn-primary mb-3">Смотреть результат</button>
+      <div class="row">
+      <ul v-if="item" id="array-rendering">
+        <li v-for="item in test" :key="item">
+          {{ item.PName}} {{ item.PName}} {{ item.PName}}
+  
+      </li>
+</ul>
 
-    </div>
-  </div>
+      </div>
+  </div>    
+ 
 </template>
 
 <script>
-/*eslint-disable*/
+/* eslint-disable */
+import Product from './Produckt.js'
 export default {
-  name: 'Card',
-  props: {
-     msg: String,
-    descr: String,
-   foto: String
-  },
-  methods:{ 
-    renove(){
-      alert('Ликвидировали!!')
+  name: 'card',
+  props:{
+    msg:String
+    },
+    data(){
+      return{
+        product:[],
+        part:Produckt,
+        check:false,
+        test:[1,2,3,4]
+      }
+    },
+    methods:{
+      added(){
+        this.produc={this.part}
+        alert(this.product)
+
+      },
+      show(){
+        {
+          this.check =true
+          alert(this.product)
+        }
+      }
     }
   }
-}
 </script>
 <style>
 </style>
