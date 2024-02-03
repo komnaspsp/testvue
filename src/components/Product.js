@@ -1,12 +1,12 @@
-class Produckt{
+class Product{
     PName
-    Praice
+    Praise
     pVolute
     constructor(iName,iPrase,iVolute){
         this.PName=iName
-        this.Praice=iPrase
+        this.Praise=iPrase
         this.PVolute=iVolute
     }
 }
 
-export default Produckt
+export default Product

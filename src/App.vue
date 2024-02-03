@@ -1,8 +1,9 @@
 <template>
 <div class="container">
-<h1> Учет корзины</h1>
 
-<Card/>
+<Card>
+<Header/>
+</Card>
 </div>
 
  
@@ -11,13 +12,15 @@
 <script>
  /* eslint-disable */
 import Card from "./components/Card.vue"
+import Header from"./components/header.vue"
 
 
 export default {
 
  
   components: {
-    Card
+    Card,
+    Header
   
     
   }
